@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+while line = gets
+  if line =~ /gosh>/
+    line.gsub!(/gosh>/, '(print')
+    print line.strip + ")\n"
+  elsif line.strip == ''
+    puts
+  else
+    print "; " + line
+  end
+end
